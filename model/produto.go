@@ -8,5 +8,4 @@ type Produto struct {
 	Valor      float64
 	Quantidade int
 	Imagem     string
-	Categoria  string
 }

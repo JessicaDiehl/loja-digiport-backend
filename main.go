@@ -21,4 +21,12 @@ func main() {
 		fmt.Printf("Imagem: %s\n", produtos.Imagem)
 		fmt.Println("-------------------------------------------")
 	}
+
+	nome := "Calça Karol" // substituir por um nome de produto
+
+	produtosFiltrados := produtosPorNome(nome)
+
+	fmt.Println(produtosFiltrados)
+
+	StartServer()
 }

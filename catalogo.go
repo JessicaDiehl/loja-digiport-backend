@@ -1,6 +1,8 @@
 package main
 
-import "github.com/JessicaDiehl/loja-digiport-backend/model"
+import (
+	"github.com/JessicaDiehl/loja-digiport-backend/model"
+)
 
 func criaCatalogo() []model.Produto { //funcao retorna um array de produto
 	produtos := []model.Produto{
@@ -54,4 +56,18 @@ func criaCatalogo() []model.Produto { //funcao retorna um array de produto
 	}
 
 	return produtos
+}
+
+func produtosPorNome(nome string) []model.Produto {
+
+	produtosCatalogo := criaCatalogo()
+
+	var produtosFiltrados []model.Produto
+
+	for _, produtos := range produtosCatalogo {
+		if produtos.Nome == nome {
+			produtosFiltrados = append(produtosFiltrados, produtos)
+		}
+	}
+	return produtosFiltrados
 }

@@ -29,6 +29,7 @@ func addProduto(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)
 		json.NewEncoder(w).Encode(model.Erro{ErrorMessage: err.Error()})
+		return
 	}
 	w.WriteHeader(http.StatusCreated)
 }
